@@ -90,8 +90,8 @@ if len(st) > 0:
     for j, color in enumerate(COLORS):
         phase = PHASES[j]
         model = TauPyModel(model=MODEL)
-        x=[0.0]
-        y=[0.0]
+        x=[]
+        y=[]
         for dist in range(int(MIN_RADIUS*10), int((MAX_RADIUS*10)+1), 1):
             arrivals = model.get_travel_times(source_depth_in_km=EVT_Z,distance_in_degree=dist/10, phase_list=[phase])
             printed = False
